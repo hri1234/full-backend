@@ -99,7 +99,7 @@ exports.forgotPassword = asyncErrorHandler(async (req, res, next) => {
     try {
         await sendEmail({
             email: user.email,
-            templateId: process.env.SENDGRID_RESET_TEMPLATEID,
+            templateId: 'd-sf5sf7s1g5ff8fd87df48dferg',
             data: {
                 reset_url: resetPasswordUrl
             }
