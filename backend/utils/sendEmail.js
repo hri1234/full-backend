@@ -5,12 +5,12 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const sendEmail = async (options) => {
 
     const transporter = nodeMailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
-        service: process.env.SMTP_SERVICE,
+        host: 'smtp.gmail.com',
+        port: 465,
+        service: 'gmail',
         auth: {
-            user: process.env.SMTP_MAIL,
-            pass: process.env.SMTP_PASSWORD,
+            user: 'hritikpandey2019@@gmail.com',
+            pass: 7999510022,
         },
     });
 
@@ -25,7 +25,7 @@ const sendEmail = async (options) => {
 
     const msg = {
         to: options.email,
-        from: process.env.SENDGRID_MAIL,
+        from: 'd-sf5sf7s1g5ff8fd87df48df51eg',
         templateId: options.templateId,
         dynamic_template_data: options.data,
     }
